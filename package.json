@@ -1,7 +1,7 @@
 {
   "name": "detail-list-elem",
   "version": "1.0.0",
-  "description": "",
+  "description": "Webcomponent for customized list with item name, item details, item image and tags.",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -9,11 +9,10 @@
     "start": "webpack-dev-server --open -d",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["webcomponent", "lit-element", "list", "element", "details", "tags", "image", "pictures", "tags", "list with detail", "web", "component"],
   "author": "Syed Rameez Aijaz <ramez.aijaz@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@webcomponents/webcomponentsjs": "^2.2.10",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^3.2.0",
@@ -31,6 +30,7 @@
     "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.10",
     "lit-element": "^2.2.1"
   }
 }

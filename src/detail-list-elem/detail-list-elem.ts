@@ -4,23 +4,23 @@ import {
 
 interface CustomTitle {
     text:string;
-    cssClass?:string;
+    style?:string;
     url?:string;
     target?:string;
 }
 interface CustomImg {
     src:string;
     alt?:string;
-    cssClass?:string;
+    style?:string;
 }
 interface CustomDescription {
     text:string;
-    cssClass?:string;
+    style?:string;
 }
 interface CustomTag {
     text:string;
     type?:string;
-    cssClass?:string;
+    style?:string;
 }
 interface Item {
     id:number
@@ -45,11 +45,12 @@ export class DetailListElem extends LitElement {
             success = 'label-success'
         }
         return tags && tags.map((tag:any)=>html`
-        <span class="label ${LabelTypes[tag.type || 'success']} ${tag.cssClass}">${tag.text || tag}</span>
+        <span class="label ${LabelTypes[tag.type || 'success']}" style=${tag.style}>${tag.text || tag}</span>
         `);
 
     }
     render() {
+        console.log(this.items);
         return html`
         <style>
             *{
@@ -121,7 +122,8 @@ export class DetailListElem extends LitElement {
                 display: block;
                 color: #999;
                 overflow: hidden;
-                padding-top: .3rem;
+                white-space: nowrap;
+                text-overflow: ellipsis;
             }
             .products-list>.item {
                 border-radius: 3px;
@@ -137,21 +139,21 @@ export class DetailListElem extends LitElement {
             ${this.items.map((item, i)=>html`
             <li class="item">
                 ${item.img && html`
-                    <div class="product-img ${item.img.cssClass}">
+                    <div class="product-img" style=${item.img.style}>
                         <img src="${this.getValue(item.img)}" alt="Product Image"/>
                     </div>
                 
                 `}
                 <div class="product-info">
                     ${item.title.url? html`
-                    <a href="${item.title.url}" target="${item.title.target}" class="product-title ${item.title.cssClass}">${item.title.text}
+                    <a href="${item.title.url}" target="${item.title.target}" class="product-title" style=${item.title.style}>${item.title.text}
                         <div class="pull-right">${this.getTags(item.tags)}</div>
                     </a>
                     
             
                     `:
                     html`
-                    <span class="product-title ${item.title.cssClass}">${item.title.text}
+                    <span class="product-title" style=${item.title.style}>${item.title.text}
                         <div class="pull-right">${this.getTags(item.tags)}</div>
                     </span>
                     
@@ -160,7 +162,7 @@ export class DetailListElem extends LitElement {
             
             
             }
-                    <span class="product-description ${item.description && item.description.cssClass}">
+                    <span class="product-description" style=${item.description ? item.description.style : 'none'}>
                         ${item.description && item.description.text}
                     </span>
                 </div>

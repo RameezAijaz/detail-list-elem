@@ -7,13 +7,13 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = (env, argv)=>({
     mode: 'development',
     entry: {
-        app: './src/index.ts'
+        'lib/detail-list-elem': './src/detail-list-elem/detail-list-elem.ts'
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         historyApiFallback: true
     },
-    devtool: argv.mode === 'production'? 'none' : 'inline-source-map',
+    devtool: argv.mode === 'production'? 'none' : 'source-map',
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
@@ -43,7 +43,7 @@ module.exports = (env, argv)=>({
         })
     ],
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist')
     },
     module: {
@@ -52,10 +52,7 @@ module.exports = (env, argv)=>({
                 test: /\.tsx?$/,
                 use: [
                     {
-                        loader: 'minify-lit-html-loader',
-                    },
-                    {
-                        loader: 'ts-loader'
+                        loader: argv.mode === 'production'? 'minify-lit-html-loader': 'ts-loader',
                     }
                 ],
                 exclude: /node_modules/

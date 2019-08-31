@@ -1,4 +1,4 @@
-import "./about-elem/detail-list-elem";
+import "./detail-list-elem/detail-list-elem";
 import {customElement, LitElement, property, html} from "lit-element";
 
 @customElement('demo-elem')
