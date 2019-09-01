@@ -1,4 +1,4 @@
-# Detail-list-elem
+# detail-list-elem
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg?style=flat-square)](https://www.webcomponents.org/element/detail-list-elem)
 
 Webcomponent for customized list with item name, item details, item image and tags.
