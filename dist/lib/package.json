@@ -1,6 +1,6 @@
 {
   "name": "detail-list-elem",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Webcomponent for customized list with item name, item details, item image and tags.",
   "main": "index.js",
   "scripts": {
