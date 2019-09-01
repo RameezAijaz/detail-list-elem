@@ -1,0 +1,39 @@
+{
+  "name": "detail-list-elem",
+  "version": "1.0.1",
+  "description": "Webcomponent for customized list with item name, item details, item image and tags.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo Error: no test specified && exit 1"
+  },
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.10",
+    "lit-element": "^2.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RameezAijaz/detail-list-elem.git"
+  },
+  "keywords": [
+    "webcomponent",
+    "lit-element",
+    "list",
+    "element",
+    "details",
+    "tags",
+    "image",
+    "pictures",
+    "tags",
+    "list",
+    "with",
+    "detail",
+    "web",
+    "component"
+  ],
+  "author": "Syed Rameez Aijaz <ramez.aijaz@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RameezAijaz/detail-list-elem/issues"
+  },
+  "homepage": "https://github.com/RameezAijaz/detail-list-elem#readme"
+}

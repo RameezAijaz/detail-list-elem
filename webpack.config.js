@@ -7,7 +7,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = (env, argv)=>({
     mode: 'development',
     entry: {
-        'lib/detail-list-elem': './src/detail-list-elem/detail-list-elem.ts'
+        'lib/index': './src/detail-list-elem/detail-list-elem.ts'
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
@@ -28,6 +28,16 @@ module.exports = (env, argv)=>({
             {
                 from: './src/assets/img/*',
                 to: './',
+                flatten: true
+            },
+            {
+                from: './src/package.json',
+                to: './lib',
+                flatten: true
+            },
+            {
+                from: './README.md',
+                to: './lib',
                 flatten: true
             }
         ]),
@@ -50,11 +60,16 @@ module.exports = (env, argv)=>({
         rules: [
             {
                 test: /\.tsx?$/,
-                use: [
+                use: argv.mode === 'production'? [
                     {
-                        loader: argv.mode === 'production'? 'minify-lit-html-loader': 'ts-loader',
+                        loader: 'minify-lit-html-loader',
+                    },
+                    {
+                        loader: 'ts-loader',
                     }
-                ],
+                ]:[{
+                    loader: 'ts-loader',
+                }],
                 exclude: /node_modules/
             },
             {

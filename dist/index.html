@@ -1,27 +1,12 @@
-# Detail-list-elem
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg?style=flat-square)](https://www.webcomponents.org/element/owner/my-element)
-
-Webcomponent for customized list with item name, item details, item image and tags.
-
-![screenshot](https://github.com/RameezAijaz/detail-list-elem/blob/master/screenshots/screenshot.png?raw=true "screenshot")
-
-# Install
-`npm i --save detail-list-elem`
-
-# Demo
-<custom-element-demo>
-<template>
-<base href="https://raw-dot-custom-elements.appspot.com/PolymerElements/paper-progress/v1.0.11/paper-progress/">
-<script src="https://cdn.jsdelivr.net/npm/webcomponents-lite@0.6.0/webcomponents-lite.min.js"></script>
-<style is="custom-style">
-  paper-progress {
-    display: block;
-    width: 100%;
-    margin: 20px 0;
-  }
-</style>
-<detail-list-elem 
-items='[
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Component UI</title>
+    <script src="webcomponents/webcomponents-loader.js"></script>
+</head>
+<body>
+<detail-list-elem items='[
 {
 "title": {"text":"Chrome", "url":"https://www.google.com/chrome/", "target":"_blank",
 "style":"text-overflow: unset; white-space: unset;"
@@ -51,8 +36,6 @@ items='[
 "tags": [{"text" : "microsoft", "type": "warn"}, {"text" : "desktop only", "type": "danger"}]
 }
 
-]'>
-</detail-list-elem>
-</template>
-</custom-element-demo>
-
+]'/>
+<script type="text/javascript" src="lib/index.js"></script></body>
+</html>

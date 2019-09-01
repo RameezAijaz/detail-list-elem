@@ -45,7 +45,7 @@ export class DetailListElem extends LitElement {
             success = 'label-success'
         }
         return tags && tags.map((tag:any)=>html`
-        <span class="label ${LabelTypes[tag.type || 'success']}" style=${tag.style}>${tag.text || tag}</span>
+        <span class="label ${LabelTypes[tag.type || 'success']}" .style=${tag.style}>${tag.text || tag}</span>
         `);
 
     }
@@ -136,24 +136,27 @@ export class DetailListElem extends LitElement {
         </style>
         <ul class="products-list product-list-in-box">
         
-            ${this.items.map((item, i)=>html`
+            ${this.items.map((item, i)=>{
+                const descriptionStyle = item.description ? item.description.style : null;
+                console.log(descriptionStyle);
+                return html`
             <li class="item">
                 ${item.img && html`
-                    <div class="product-img" style=${item.img.style}>
+                    <div class="product-img" .style=${item.img.style}>
                         <img src="${this.getValue(item.img)}" alt="Product Image"/>
                     </div>
                 
                 `}
                 <div class="product-info">
                     ${item.title.url? html`
-                    <a href="${item.title.url}" target="${item.title.target}" class="product-title" style=${item.title.style}>${item.title.text}
+                    <a href="${item.title.url}" target="${item.title.target}" class="product-title" .style=${item.title.style}>${item.title.text}
                         <div class="pull-right">${this.getTags(item.tags)}</div>
                     </a>
                     
             
                     `:
                     html`
-                    <span class="product-title" style=${item.title.style}>${item.title.text}
+                    <span class="product-title" .style=${item.title.style}>${item.title.text}
                         <div class="pull-right">${this.getTags(item.tags)}</div>
                     </span>
                     
@@ -162,11 +165,13 @@ export class DetailListElem extends LitElement {
             
             
             }
-                    <span class="product-description" style=${item.description ? item.description.style : 'none'}>
+                    <span class="product-description" .style=${descriptionStyle}>
                         ${item.description && item.description.text}
                     </span>
                 </div>
-            </li>`)}
+            </li>`}
+        
+        )}
         </ul>
         `;
     }
