@@ -9,6 +9,8 @@ Webcomponent for customized list with item name, item details, item image and ta
 `npm i --save detail-list-elem`
 
 # Demo
+<!---
+```
 <custom-element-demo>
 <template>
 <base href="https://raw-dot-custom-elements.appspot.com/PolymerElements/paper-progress/v1.0.11/paper-progress/">
@@ -24,4 +26,5 @@ Webcomponent for customized list with item name, item details, item image and ta
 <paper-progress indeterminate></paper-progress>
 </template>
 </custom-element-demo>
-
+```
+-->
