@@ -5,8 +5,11 @@ Webcomponent for customized list with item name, item details, item image and ta
 
 ![screenshot](https://github.com/RameezAijaz/detail-list-elem/blob/master/screenshots/screenshot.png?raw=true "screenshot")
 
+## Demo
+https://detail-list-elem-demo.firebaseapp.com/
+
 ## Install
-1. Run ```npm i --save detail-list-elem``` inside your project
+Run ```npm i --save detail-list-elem``` inside your project
 
 ## Usage
 1. Import ``webcomponent polyfill`` in ``index.html`` using
@@ -88,81 +91,4 @@ Webcomponent for customized list with item name, item details, item image and ta
           ]
         
        }
-```
-# Demo
-<!---
-```
-<custom-element-demo>
-  <template>
-    <script src="https://cdn.jsdelivr.net/npm/webcomponents-lite@0.6.0/webcomponents-lite.min.js"></script>
-    <script src="./index.js"></script>
-    <detail-list-elem items='[
-    {
-    "title": {"text":"Chrome", "url":"https://www.google.com/chrome/", "target":"_blank",
-    "style":"text-overflow: unset; white-space: unset;"
-    
-    },
-    "description": {"text":"Google Chrome is a cross-platform web browser developed by Google. It was first released in 2008 for Microsoft Windows"},
-    "img": {"src": "chrome.png"},
-    "tags": [{"text" : "google"}]
-    },
-    {
-    "title": {"text": "FireFox"},
-    "description": {"text": "Mozilla Firefox, or simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, Mozilla Corporation.",
-    "style":"text-overflow: unset; white-space: unset;"},
-    "img": {"src":"firefox.jpeg"},
-    "tags": [{"text" : "mozilla corporation", "type": "warn"}]
-    },
-    {
-    "title": {"text": "Safari"},
-    "description": {"text": "Safari is a graphical web browser developed by Apple, based on the WebKit engine."},
-    "img": {"src": "safari.jpeg"},
-    "tags": [{"text" : "apple", "type": "info"}]
-    },
-    {
-    "title": {"text": "Edge"},
-    "description": {"text": "Microsoft Edge is a web browser developed by Microsoft. It was first released for Windows 10 and Xbox One in 2015"},
-    "img": {"src": "edge.jpg"},
-    "tags": [{"text" : "microsoft", "type": "warn"}, {"text" : "desktop only", "type": "danger"}]
-    }
-    
-    ]'>
-    </detail-list-elem>
-  </template>
-</custom-element-demo>
-```
--->
-```html
-<detail-list-elem items='[
-    {
-    "title": {"text":"Chrome", "url":"https://www.google.com/chrome/", "target":"_blank",
-    "style":"text-overflow: unset; white-space: unset;"
-    
-    },
-    "description": {"text":"Google Chrome is a cross-platform web browser developed by Google. It was first released in 2008 for Microsoft Windows"},
-    "img": {"src": "chrome.png"},
-    "tags": [{"text" : "google"}]
-    },
-    {
-    "title": {"text": "FireFox"},
-    "description": {"text": "Mozilla Firefox, or simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, Mozilla Corporation.",
-    "style":"text-overflow: unset; white-space: unset;"},
-    "img": {"src":"firefox.jpeg"},
-    "tags": [{"text" : "mozilla corporation", "type": "warn"}]
-    },
-    {
-    "title": {"text": "Safari"},
-    "description": {"text": "Safari is a graphical web browser developed by Apple, based on the WebKit engine."},
-    "img": {"src": "safari.jpeg"},
-    "tags": [{"text" : "apple", "type": "info"}]
-    },
-    {
-    "title": {"text": "Edge"},
-    "description": {"text": "Microsoft Edge is a web browser developed by Microsoft. It was first released for Windows 10 and Xbox One in 2015"},
-    "img": {"src": "edge.jpg"},
-    "tags": [{"text" : "microsoft", "type": "warn"}, {"text" : "desktop only", "type": "danger"}]
-    }
-    
-    ]'>
-</detail-list-elem>
 ```

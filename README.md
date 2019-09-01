@@ -1,9 +1,9 @@
 # Detail-list-elem
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg?style=flat-square)](https://www.webcomponents.org/element/owner/my-element)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg?style=flat-square)](https://www.webcomponents.org/element/detail-list-elem)
 
 Webcomponent for customized list with item name, item details, item image and tags.
 
-![screenshot](https://github.com/RameezAijaz/detail-list-elem/blob/master/screenshots/screenshot.png?raw=true "screenshot")
+[![screenshot](https://github.com/RameezAijaz/detail-list-elem/blob/master/screenshots/screenshot.png?raw=true "screenshot")](https://detail-list-elem-demo.firebaseapp.com/)
 
 ## Demo
 https://detail-list-elem-demo.firebaseapp.com/
